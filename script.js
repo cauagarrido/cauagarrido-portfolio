@@ -1,7 +1,6 @@
-﻿// Initialize Lucide icons
+﻿
         lucide.createIcons();
 
-        // --- Intersection Observer for Reveal Animations ---
         const revealOptions = {
             threshold: 0.15,
             rootMargin: '0px 0px -50px 0px'
@@ -10,7 +9,7 @@
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    // Stagger project cards if the grid enters view
+
                     if (entry.target.classList.contains('projects-grid')) {
                         const cards = entry.target.querySelectorAll('.project-card');
                         cards.forEach((card, index) => {
@@ -25,12 +24,10 @@
             });
         }, revealOptions);
 
-        // Observe elements
         document.querySelectorAll('.timeline-item-wrapper, .projects-grid, .cta-section').forEach(el => {
             revealObserver.observe(el);
         });
 
-        // --- Vertical Timeline Progress Line ---
         const progressLine = document.getElementById('timeline-progress-v');
         const timelineBody = document.querySelector('.timeline-body');
 
@@ -39,8 +36,7 @@
 
             const rect = timelineBody.getBoundingClientRect();
             const viewHeight = window.innerHeight;
-            
-            // Progress starts when top of timeline hits middle of screen
+
             const startScroll = rect.top - (viewHeight / 2);
             const totalHeight = rect.height;
             
@@ -51,18 +47,15 @@
             }
         };
 
-    // --- Project Card 3D Tilt & Mouse Interaction ---
     const handleOnMouseMove = e => {
         const { currentTarget: target } = e;
         const rect = target.getBoundingClientRect(),
         x = e.clientX - rect.left,
         y = e.clientY - rect.top;
 
-        // Flashlight vars
         target.style.setProperty("--mouse-x", `${x}px`);
         target.style.setProperty("--mouse-y", `${y}px`);
 
-        // 3D Tilt calculation
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
         const rotateX = ((y - centerY) / centerY) * -10; // Max 10deg
@@ -84,3 +77,4 @@
         window.addEventListener('scroll', updateTimelineProgress);
         window.addEventListener('resize', updateTimelineProgress);
         updateTimelineProgress(); // Initial check
+
