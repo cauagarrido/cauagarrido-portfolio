@@ -1,0 +1,42 @@
+/* ==========================================================================
+   CAUÃ GARRIDO - PORTFOLIO FULLSTACK
+   Inspired by Sphere Digital Recruitment (https://www.spheredigitalrecruitment.com/)
+   ========================================================================== */
+
+:root {
+  /* Color Palette */
+  --bg-page: #08080c;
+  --bg-surface: #0e0e15;
+  --bg-card: rgba(18, 18, 26, 0.85);
+  --bg-card-hover: rgba(26, 26, 38, 0.95);
+  --bg-glass: rgba(255, 255, 255, 0.04);
+  --bg-glass-card: rgba(15, 15, 22, 0.7);
+
+  /* Sphere Digital Recruitment Signature Accents */
+  --accent-purple: #9e8fff;
+  --accent-purple-light: #c4b5fd;
+  --accent-purple-glow: rgba(158, 143, 255, 0.35);
+  --accent-mint: #34d399;
+  --accent-mint-light: #a7f3d0;
+  --accent-mint-glow: rgba(52, 211, 153, 0.3);
+  --accent-coral: #f43f5e;
+  --accent-coral-glow: rgba(244, 63, 94, 0.3);
+
+  /* Typography Colors */
+  --text-main: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.75);
+  --text-muted: rgba(255, 255, 255, 0.45);
+
+  /* Borders */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-glow: rgba(158, 143, 255, 0.3);
+  --border-hover: rgba(255, 255, 255, 0.25);
+
+  /* Typography */
+  --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Transitions */
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-bounce: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}

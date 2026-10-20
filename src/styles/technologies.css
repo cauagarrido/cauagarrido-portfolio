@@ -1,0 +1,157 @@
+/* ==========================================================================
+   TECHNOLOGIES SECTION (PLACED BELOW PROJECTS - SPHERE "INDUSTRIES" STYLE)
+   ========================================================================== */
+.technologies-section {
+  position: relative;
+  padding: 8rem 0 9rem 0;
+  background: #08080c;
+  overflow: hidden;
+}
+
+.tech-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 3.5rem;
+  position: relative;
+  z-index: 5;
+}
+
+.filter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+}
+
+.filter-pill:hover {
+  background: rgba(255, 255, 255, 0.09);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.filter-pill.active {
+  background: #ffffff;
+  color: #08080c;
+  border-color: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+}
+
+.tech-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  position: relative;
+  z-index: 5;
+}
+
+.tech-card {
+  background: rgba(18, 18, 26, 0.7);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 24px;
+  padding: 2.2rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--card-accent, var(--accent-purple)), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(158, 143, 255, 0.35);
+  background: rgba(26, 26, 38, 0.9);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.tech-card:hover::before {
+  opacity: 1;
+}
+
+.tech-card-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.tech-icon-box {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  transition: var(--transition-smooth);
+}
+
+.tech-card:hover .tech-icon-box {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.08);
+}
+
+.tech-level-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  background: rgba(158, 143, 255, 0.12);
+  border: 1px solid rgba(158, 143, 255, 0.25);
+  color: var(--accent-purple-light);
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tech-card-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.6rem;
+}
+
+.tech-card-body p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.tech-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}

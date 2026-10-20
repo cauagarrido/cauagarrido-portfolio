@@ -1,0 +1,155 @@
+/* ==========================================================================
+   TIMELINE & ABOUT SECTION ("TRAJETÓRIA")
+   ========================================================================== */
+.experience-section {
+  position: relative;
+  padding: 8rem 0 9rem 0;
+  background: linear-gradient(180deg, var(--bg-page) 0%, #0d0d16 100%);
+  overflow: hidden;
+}
+
+.timeline-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: flex-start;
+  position: relative;
+  z-index: 5;
+}
+
+.timeline-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.timeline-column-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-column-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 1.3rem;
+  border-radius: 9999px;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.timeline-column-badge.purple {
+  background: rgba(158, 143, 255, 0.12);
+  border: 1px solid rgba(158, 143, 255, 0.3);
+  color: var(--accent-purple-light);
+}
+
+.timeline-column-badge.mint {
+  background: rgba(52, 211, 153, 0.12);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  color: var(--accent-mint-light);
+}
+
+/* Timeline Left & Right Body */
+.timeline-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.timeline-list::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  bottom: 15px;
+  left: 24px;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.timeline-item-sphere {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.timeline-dot {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #12121c;
+  border: 2px solid var(--accent-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 20px var(--accent-purple-glow);
+}
+
+.timeline-dot.mint-dot {
+  border-color: var(--accent-mint);
+  box-shadow: 0 0 20px var(--accent-mint-glow);
+}
+
+.timeline-card-content {
+  background: rgba(18, 18, 26, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 24px;
+  padding: 2rem;
+  width: 100%;
+  transition: var(--transition-smooth);
+}
+
+.timeline-card-content:hover {
+  border-color: rgba(158, 143, 255, 0.35);
+  transform: translateX(6px);
+  background: rgba(24, 24, 36, 0.9);
+}
+
+.timeline-year-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent-purple);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.timeline-year-tag.mint {
+  color: var(--accent-mint);
+}
+
+.timeline-card-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.4rem;
+}
+
+.timeline-institution {
+  font-size: 0.9rem;
+  color: var(--accent-mint);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.timeline-card-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.timeline-card-content.mint-hover:hover {
+  border-color: rgba(52, 211, 153, 0.35);
+}

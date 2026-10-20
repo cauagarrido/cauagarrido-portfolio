@@ -1,0 +1,280 @@
+/* ==========================================================================
+   Hero Section (Sphere Inspired Header Grid & Headline)
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  padding: 9.5rem 0 6rem 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-bg-auras {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.aura-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(130px);
+  opacity: 0.35;
+}
+
+.aura-blob-1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--accent-purple) 0%, transparent 70%);
+  top: -100px;
+  right: -50px;
+  animation: floatOrb 22s ease-in-out infinite alternate;
+}
+
+.aura-blob-2 {
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, var(--accent-mint) 0%, transparent 70%);
+  bottom: 0px;
+  left: -80px;
+  opacity: 0.25;
+  animation: floatOrb 26s ease-in-out infinite alternate-reverse;
+}
+
+.aura-blob-3 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #6366f1 0%, transparent 70%);
+  top: 40%;
+  left: 30%;
+  opacity: 0.2;
+}
+
+/* Hero Visual Banner (Photo Cards Collage, Sphere Style) */
+.hero-visual-collage {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  max-width: 1200px;
+  margin: 0 auto 3.5rem auto;
+  position: relative;
+  z-index: 2;
+}
+
+.collage-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 190px;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  transition: var(--transition-smooth);
+}
+
+.collage-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-purple-light);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+}
+
+.collage-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.collage-card:hover img {
+  transform: scale(1.08);
+}
+
+.collage-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8, 8, 12, 0.1) 0%, rgba(8, 8, 12, 0.85) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.2rem;
+  z-index: 2;
+}
+
+.collage-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.65rem;
+  background: rgba(12, 12, 18, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  width: fit-content;
+  margin-bottom: 0.35rem;
+}
+
+.collage-title {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Hero Center Content */
+.hero-center-content {
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 5.8vw, 5.2rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.hero-headline .highlight-purple {
+  color: var(--accent-purple);
+  display: inline-block;
+  position: relative;
+}
+
+.hero-headline .highlight-mint {
+  color: var(--accent-mint);
+  display: inline-block;
+}
+
+.hero-subheadline {
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  color: var(--text-secondary);
+  line-height: 1.65;
+  max-width: 720px;
+  margin: 0 auto 2.5rem auto;
+  font-weight: 400;
+}
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+/* Hero Social Strip */
+.hero-social-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 3.5rem;
+}
+
+.hero-social-label {
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.hero-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.social-icon-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+  backdrop-filter: blur(10px);
+  text-decoration: none;
+}
+
+.social-icon-btn:hover {
+  background: var(--accent-purple);
+  border-color: var(--accent-purple);
+  color: #08080c;
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 8px 25px var(--accent-purple-glow);
+}
+
+/* Hero Impact Stats Bar (Sphere Numbers Row) */
+.hero-stats-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+.hero-stat-item {
+  background: rgba(18, 18, 26, 0.7);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 20px;
+  padding: 1.6rem 1.4rem;
+  text-align: center;
+  transition: var(--transition-smooth);
+}
+
+.hero-stat-item:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-glow);
+  background: rgba(25, 25, 36, 0.9);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.hero-stat-number {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.2vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.hero-stat-number.purple {
+  color: var(--accent-purple);
+}
+
+.hero-stat-number.mint {
+  color: var(--accent-mint);
+}
+
+.hero-stat-label {
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

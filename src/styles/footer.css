@@ -1,0 +1,120 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+  background: #050508;
+  border-top: 1px solid var(--border-subtle);
+  padding: 4.5rem 0 2.5rem 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-brand h2 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.3rem;
+}
+
+.footer-brand p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-nav a {
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: var(--transition-smooth);
+}
+
+.footer-nav a:hover {
+  color: var(--accent-purple);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  font-size: 0.85rem;
+}
+
+.footer-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.footer-social-icons a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+.footer-social-icons a:hover {
+  background: var(--accent-purple);
+  border-color: var(--accent-purple);
+  color: #08080c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--accent-purple-glow);
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.8rem;
+  background: rgba(52, 211, 153, 0.1);
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  border-radius: 9999px;
+  color: var(--accent-mint);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-dot-pulse {
+  width: 8px;
+  height: 8px;
+  background: var(--accent-mint);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent-mint);
+  animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+@keyframes floatOrb {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(40px, 60px) scale(1.08); }
+  100% { transform: translate(-30px, 80px) scale(0.95); }
+}
