@@ -380,6 +380,7 @@
     right: 0.5rem;
     padding: 0.45rem 0.55rem;
     gap: 0.25rem;
+    justify-content: flex-start;
   }
 
   .nav-brand {
@@ -387,11 +388,11 @@
   }
 
   .nav-brand::before {
-    width: 108px;
-    height: 19px;
+    width: 122px;
+    height: 21px;
     background-image: url('../assets/cg-wordmark.png');
-    background-size: 118px auto;
-    background-position: -5px -11px;
+    background-size: 134px auto;
+    background-position: -6px -13px;
   }
 
   .nav-brand-title {
@@ -400,6 +401,7 @@
 
   .nav-actions {
     gap: 0.25rem;
+    margin-left: 0.6rem;
   }
 
   .btn-pill-linktree {
@@ -447,11 +449,11 @@
   }
 
   .nav-brand::before {
-    width: 88px;
+    width: 98px;
     height: 16px;
     background-image: url('../assets/cg-wordmark.png');
-    background-size: 96px auto;
-    background-position: -4px -9px;
+    background-size: 108px auto;
+    background-position: -5px -10px;
   }
 
   .nav-brand-title {
