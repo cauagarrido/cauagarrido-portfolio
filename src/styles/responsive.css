@@ -48,11 +48,11 @@
   }
 
   .nav-brand::before {
-    width: 64px;
-    height: 39px;
-    background-image: url('../assets/cg-logo.png');
-    background-size: 113px auto;
-    background-position: -26px -10px;
+    width: 145px;
+    height: 24px;
+    background-image: url('../assets/cg-wordmark.png');
+    background-size: 159px auto;
+    background-position: -7px -15px;
   }
 
   .nav-brand-title {
@@ -387,11 +387,11 @@
   }
 
   .nav-brand::before {
-    width: 58px;
-    height: 35px;
-    background-image: url('../assets/cg-logo.png');
-    background-size: 103px auto;
-    background-position: -23px -9px;
+    width: 108px;
+    height: 19px;
+    background-image: url('../assets/cg-wordmark.png');
+    background-size: 118px auto;
+    background-position: -5px -11px;
   }
 
   .nav-brand-title {
@@ -447,11 +447,11 @@
   }
 
   .nav-brand::before {
-    width: 52px;
-    height: 32px;
-    background-image: url('../assets/cg-logo.png');
-    background-size: 92px auto;
-    background-position: -21px -8px;
+    width: 88px;
+    height: 16px;
+    background-image: url('../assets/cg-wordmark.png');
+    background-size: 96px auto;
+    background-position: -4px -9px;
   }
 
   .nav-brand-title {

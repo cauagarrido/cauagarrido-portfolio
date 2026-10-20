@@ -36,7 +36,7 @@ export const projects = [
     repo: 'https://github.com/cauagarrido/BallOne',
     tags: ['Projeto Freelancer', 'Catálogo & E-commerce', 'Next.js & Tailwind', '2024 / 2025'],
     description:
-      'Plataforma institucional e catálogo digital interativo para fabricante de mesas de sinuca de alto padrão, pebolins e acessórios de lazer. Apresentação imersiva de produtos sob medida, integração direta de orçamentos via WhatsApp e layout responsivo de alta conversão.',
+      'Página de divulgação de produtos para a BallOne, desenvolvida para apresentar mesas de sinuca, pebolins e acessórios de lazer. O projeto valoriza o catálogo da loja, os produtos sob medida e o contato direto para orçamentos via WhatsApp em uma experiência responsiva.',
   },
   {
     id: 'ecommerce-api',
