@@ -1,297 +1,857 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cauã Garrido | Desenvolvedor Fullstack</title>
+    <title>Cauã Garrido | Desenvolvedor Fullstack — Interfaces Modernas & Alta Performance</title>
     
+    <meta name="description" content="Portfolio de Cauã Garrido, Desenvolvedor Fullstack especializado em Python, React, JavaScript, Node.js e SQL. Criando interfaces modernas e aplicações escaláveis.">
+    <meta name="keywords" content="Desenvolvedor Fullstack, Cauã Garrido, React, Python, Node.js, JavaScript, SQL, Web Developer Salvador">
+    <meta name="author" content="Cauã Garrido">
+    
+    <!-- Open Graph / Meta -->
+    <meta property="og:title" content="Cauã Garrido | Desenvolvedor Fullstack">
+    <meta property="og:description" content="Interfaces modernas e performance otimizada. Explore projetos e case studies.">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts (Plus Jakarta Sans & Inter) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
     
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
     
+    <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
-    
 </head>
 <body>
-    <nav class="glass-nav animate-fade-up">
-        <a href="#" style="font-family: var(--font-display); font-size: 1.6rem; font-weight: 300; text-decoration: none; color: white; letter-spacing: -0.05em;">CAUÃ<span>    </span> GARRIDO</a>
-        <div class="nav-links">
-            <a href="#about">Resumo</a>
-            <a href="#projects">Projetos</a>
-            <a href="#contact">Contato</a>
-        </div>
-        <a href="#contact" class="btn-nav-accent">
-            Falar Comigo
+
+    <!-- ==========================================================================
+         FLOATING GLASS PILL NAVBAR
+         ========================================================================== -->
+    <nav class="glass-nav">
+        <a href="#hero" class="nav-brand" aria-label="Página Inicial">
+            <span class="nav-brand-title">CAUÃ GARRIDO</span>
+            <span class="nav-brand-badge">Fullstack</span>
         </a>
+
+        <div class="nav-links">
+            <a href="#hero" class="nav-link">Sobre Mim</a>
+            <a href="#projects" class="nav-link">Projetos</a>
+            <a href="#technologies" class="nav-link">Tecnologias</a>
+            <a href="#about" class="nav-link">Trajetória</a>
+            <a href="#contact" class="nav-link">Contato</a>
+        </div>
+
+        <div class="nav-actions">
+            <a href="https://linktr.ee/cauagarrido" target="_blank" rel="noopener noreferrer" class="btn-pill-linktree" aria-label="Linktree de Cauã Garrido">
+                <span class="iconify" data-icon="simple-icons:linktree" style="font-size: 1.05rem;"></span>
+                <span class="linktree-label">Linktree</span>
+            </a>
+            <a href="https://wa.me/71999847528" target="_blank" rel="noopener noreferrer" class="btn-pill-primary">
+                <span class="btn-pill-text">Falar Comigo</span>
+                <i data-lucide="arrow-up-right"></i>
+            </a>
+            <button class="nav-mobile-toggle" id="mobileMenuToggle" aria-label="Abrir menu de navegação">
+                <i data-lucide="menu" id="toggleIcon"></i>
+            </button>
+        </div>
     </nav>
 
-    <header class="hero-section hero">
-        <div class="bg-aura-wrapper">
-            <div class="aura aura-1"></div>
-            <div class="aura aura-2"></div>
-            <div class="aura aura-3"></div>
-            <div class="bg-noise"></div>
+    <!-- Mobile Drawer Menu Overlay -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="mobile-drawer-content">
+            <div class="mobile-drawer-links">
+                <a href="#hero" class="mobile-nav-link"><i data-lucide="user"></i><span>Sobre Mim</span></a>
+                <a href="#projects" class="mobile-nav-link"><i data-lucide="folder-git-2"></i><span>Projetos</span></a>
+                <a href="#technologies" class="mobile-nav-link"><i data-lucide="cpu"></i><span>Tecnologias</span></a>
+                <a href="#about" class="mobile-nav-link"><i data-lucide="graduation-cap"></i><span>Trajetória</span></a>
+                <a href="#contact" class="mobile-nav-link"><i data-lucide="send"></i><span>Contato</span></a>
+            </div>
+            <div class="mobile-drawer-socials">
+                <a href="https://linktr.ee/cauagarrido" target="_blank" rel="noopener noreferrer" class="mobile-social-chip">
+                    <span class="iconify" data-icon="simple-icons:linktree"></span>
+                    <span>Linktree</span>
+                </a>
+                <a href="https://github.com/cauagarrido" target="_blank" rel="noopener noreferrer" class="mobile-social-chip">
+                    <i data-lucide="github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://linkedin.com/in/cauagarrido" target="_blank" rel="noopener noreferrer" class="mobile-social-chip">
+                    <i data-lucide="linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://instagram.com/cauagarrido" target="_blank" rel="noopener noreferrer" class="mobile-social-chip">
+                    <i data-lucide="instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://wa.me/71999847528" target="_blank" rel="noopener noreferrer" class="mobile-social-chip whatsapp">
+                    <span class="iconify" data-icon="mdi:whatsapp"></span>
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+         HERO SECTION (SPHERE DIGITAL RECRUITMENT INSPIRED)
+         ========================================================================== -->
+    <header class="hero-section" id="hero">
+        <div class="hero-bg-auras">
+            <div class="aura-blob aura-blob-1"></div>
+            <div class="aura-blob aura-blob-2"></div>
+            <div class="aura-blob aura-blob-3"></div>
         </div>
 
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <div class="animate-blur-in delay-100">
-                        <div class="badge">Desenvolvedor Fullstack</div>
-                        <h1 class="headline">
-                            Interfaces <span>modernas.</span><br>
-                            Performance <span>otimizada.</span>
-                        </h1>
-                    </div>
-                    
-                    <p class="subheadline animate-fade-up delay-200" style="margin-bottom: 0.5rem;">
-                        Sou um desenvolvedor Fullstack que cria interfaces modernas e funcionais. Com experiência em tecnologias como Python, React, JavaScript e Node.js, busco sempre entregar soluções que combinam design elegante com performance otimizada.
-                    </p>
-                    <p class="subheadline animate-fade-up delay-200" style="font-size: 1.05rem; opacity: 0.8;">
-                        Acredito que a tecnologia deve ser acessível e intuitiva, e trabalho constantemente para aprimorar minhas habilidades e me manter atualizado com as últimas tendências do desenvolvimento web.
-                    </p>
+            <!-- Hero Center Headlines & CTA -->
+            <div class="hero-center-content">
+                <div class="section-tag">
+                    <span class="status-dot-pulse"></span>
+                    Desenvolvedor Fullstack · Salvador, BA
+                </div>
 
-                    <div class="cta-group animate-fade-up delay-300">
-                        <a href="#projects" class="btn-beam">
-                            <div class="beam-border"></div>
-                            <div class="btn-content-bg">
-                                <div class="lines-overlay"></div>
-                                <div class="bottom-glow"></div>
-                            </div>
-                            <span style="position: relative; z-index: 10; display: flex; align-items: center;">
-                                Ver Projetos
-                                <i data-lucide="arrow-up-right" style="margin-left: 0.6rem; width: 1.1rem; height: 1.1rem;"></i>
-                            </span>
+                <h1 class="hero-headline">
+                    Construo interfaces <span class="highlight-purple">modernas</span> e aplicações de <span class="highlight-mint">alto impacto.</span>
+                </h1>
+
+                <p class="hero-subheadline">
+                    Aliando design contemporâneo a uma arquitetura sólida. Especialista no desenvolvimento de ecossistemas web completos com <strong>Python, React, Node.js, JavaScript e SQL</strong>.
+                </p>
+
+                <div class="hero-cta-group">
+                    <a href="#projects" class="btn-pill-purple">
+                        <span>Ver Projetos em Destaque</span>
+                        <i data-lucide="arrow-down-right" style="width: 1.15rem; height: 1.15rem;"></i>
+                    </a>
+                    <a href="#contact" class="btn-pill-dark">
+                        <i data-lucide="message-square" style="width: 1.15rem; height: 1.15rem;"></i>
+                        <span>Entrar em Contato</span>
+                    </a>
+                </div>
+
+                <!-- Social Icons Strip in Hero -->
+                <div class="hero-social-strip">
+                    <span class="hero-social-label">Redes & Conexões:</span>
+                    <div class="hero-social-icons">
+                        <a href="https://github.com/cauagarrido" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub" aria-label="GitHub">
+                            <i data-lucide="github" style="width: 1.15rem; height: 1.15rem;"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/cauagarrido" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn" aria-label="LinkedIn">
+                            <i data-lucide="linkedin" style="width: 1.15rem; height: 1.15rem;"></i>
+                        </a>
+                        <a href="https://instagram.com/cauagarrido" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Instagram" aria-label="Instagram">
+                            <i data-lucide="instagram" style="width: 1.15rem; height: 1.15rem;"></i>
+                        </a>
+                        <a href="https://wa.me/71999847528" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="WhatsApp" aria-label="WhatsApp">
+                            <span class="iconify" data-icon="mdi:whatsapp" style="font-size: 1.25rem;"></span>
+                        </a>
+                        <a href="https://linktr.ee/cauagarrido" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Linktree" aria-label="Linktree">
+                            <span class="iconify" data-icon="simple-icons:linktree" style="font-size: 1.15rem;"></span>
                         </a>
                     </div>
                 </div>
+            </div>
 
-
+            <!-- Hero Impact Pillars (Clean & Authentic) -->
+            <div class="hero-stats-bar">
+                <div class="hero-stat-item">
+                    <span class="hero-stat-number purple">Fullstack</span>
+                    <span class="hero-stat-label">Aplicações End-to-End</span>
+                </div>
+                <div class="hero-stat-item">
+                    <span class="hero-stat-number mint">Clean Code</span>
+                    <span class="hero-stat-label">Arquitetura & Qualidade</span>
+                </div>
+                <div class="hero-stat-item">
+                    <span class="hero-stat-number">UI/UX</span>
+                    <span class="hero-stat-label">Design Moderno & Fluido</span>
+                </div>
+                <div class="hero-stat-item">
+                    <span class="hero-stat-number purple">Performance</span>
+                    <span class="hero-stat-label">Código Otimizado & Veloz</span>
+                </div>
             </div>
         </div>
     </header>
 
     <main>
-        
 
-        <section class="experience-section" id="about">
-            <div class="section-bg">
-                <div class="dots-grid"></div>
-            </div>
-
-            <div class="timeline-outer">
-                <h2 class="headline" style="text-align: center; margin-bottom: 5rem; max-width: 1000px; margin-inline: auto;">
-                    De números a estratégia: uma <br>
-                    trajetória de formação do <span>profissional.</span>
-                </h2>
-
-                <div class="timeline-body" style="position: relative;">
-                    <div class="timeline-v-line"></div>
-                    <div class="timeline-v-progress" id="timeline-progress-v"></div>
-
-                    
-                    <div class="timeline-item-wrapper">
-                        <div class="timeline-v-dot"></div>
-                        <div class="timeline-item-content">
-                            <span class="timeline-v-year">2019-2021</span>
-                            <div class="timeline-card-glass">
-                                <div class="company-header">
-                                    <div class="company-logo">
-                                        <span class="iconify" data-icon="ph:game-controller-fill" style="color: var(--primary);"></span>
-                                    </div>
-                                    <h3 class="company-name">Escola Saga</h3>
-                                </div>
-                                <p class="job-desc">
-                                    Durante meu período na Escola Saga, participei de aulas de design gráfico, me especializei em edição de imagem, videos e animações 3D.
-                                </p>
-                            </div>
-                        </div>
+        <!-- ==========================================================================
+             SECTION 1: PROJETOS (PLACED ABOVE TECHNOLOGIES!)
+             Sphere "OMG UK" Cinematic Case Study Presentation Format
+             ========================================================================== -->
+        <section class="projects-section" id="projects">
+            <div class="container">
+                <div class="projects-header-row">
+                    <div class="section-header-left">
+                        <div class="section-aura-glow"></div>
+                        <div class="section-tag mint">Case Studies & Portfólio</div>
+                        <h2 class="headline">Projetos em <span class="purple">Destaque</span></h2>
+                        <p class="subheadline">
+                            Aplicações reais desenvolvidas com rigor técnico, arquitetura escalável e design refinado no padrão das melhores agências digitais.
+                        </p>
                     </div>
 
-                    
-                    <div class="timeline-item-wrapper">
-                        <div class="timeline-v-dot"></div>
-                        <div class="timeline-item-content">
-                            <span class="timeline-v-year">2023</span>
-                            <div class="timeline-card-glass">
-                                <div class="company-header">
-                                    <div class="company-logo">
-                                        <span class="iconify" data-icon="ph:rocket-launch-fill" style="color: var(--accent);"></span>
-                                    </div>
-                                    <h3 class="company-name">Infinity School</h3>
-                                </div>
-                                <p class="job-desc">
-                                    Na infinity school desenvolvi habilidades em desenvolvimento de sites e sistemas, utilizando Python, HTML, CSS, JavaScript e SQL. Além disso, tive contato com frameworks como React.
-                                </p>
-                            </div>
+                    <!-- Carousel Controls (Sphere Style Prev/Next Buttons) -->
+                    <div class="carousel-controls">
+                        <div class="carousel-counter">
+                            <span class="carousel-current" id="carouselCurrent">01</span>
+                            <span class="carousel-divider">/</span>
+                            <span class="carousel-total" id="carouselTotal">05</span>
+                        </div>
+                        <div class="carousel-nav-buttons">
+                            <button class="carousel-nav-btn" id="carouselPrev" aria-label="Projeto anterior" title="Anterior">
+                                <i data-lucide="arrow-left" style="width: 1.25rem; height: 1.25rem;"></i>
+                            </button>
+                            <button class="carousel-nav-btn" id="carouselNext" aria-label="Próximo projeto" title="Próximo">
+                                <i data-lucide="arrow-right" style="width: 1.25rem; height: 1.25rem;"></i>
+                            </button>
                         </div>
                     </div>
+                </div>
 
-                    
-                    <div class="timeline-item-wrapper">
-                        <div class="timeline-v-dot"></div>
-                        <div class="timeline-item-content">
-                            <span class="timeline-v-year">2023-2025</span>
-                            <div class="timeline-card-glass">
-                                <div class="company-header">
-                                    <div class="company-logo">
-                                        <span class="iconify" data-icon="ph:graduation-cap-fill" style="color: var(--tech-purple);"></span>
-                                    </div>
-                                    <h3 class="company-name">Ucsal</h3>
+                <!-- Projects Carousel Track with Peek Preview Effect -->
+                <div class="projects-carousel-wrapper">
+                    <div class="projects-carousel-track" id="projectsCarousel">
+
+                        <!-- PROJECT 1: LAÍS GARRIDO ARQUITETURA -->
+                        <article class="case-study-card-carousel" onclick="window.open('https://laisgarrido.vercel.app/', '_blank')" role="button" tabindex="0" aria-label="Abrir projeto Laís Garrido Arquitetura">
+                            <img src="./assets/laisgarrido.png" alt="Laís Garrido Arquitetura e Interiores" class="case-study-bg-img">
+                            <div class="case-study-gradient-overlay"></div>
+
+                            <div class="case-study-top-bar">
+                                <div class="case-study-tags">
+                                    <span class="tag-pill accent">Projeto Freelancer</span>
+                                    <span class="tag-pill">React & TypeScript</span>
+                                    <span class="tag-pill">Tailwind CSS</span>
+                                    <span class="tag-pill">2024 / 2025</span>
                                 </div>
-                                <p class="job-desc">
-                                    Na Ucsal, cursei Análise e Desenvolvimento de Sistemas, onde desenvolvi aplicações web e desktop, além de me aprofundar em banco de dados e algoritmos. Utilizando como principais tecnologias Java, PostgreSQL, HTML, CSS e JavaScript.
+                                <div class="btn-case-study-circle" title="Acessar Site">
+                                    <i data-lucide="arrow-up-right" style="width: 1.25rem; height: 1.25rem;"></i>
+                                </div>
+                            </div>
+
+                            <div class="case-study-middle-info">
+                                <span class="case-study-category">Arquitetura & Design de Interiores</span>
+                                <h3 class="case-study-title">Laís Garrido — Arquitetura</h3>
+                                <p class="case-study-desc">
+                                    Landing page de alto padrão e portfólio completo para escritório de arquitetura e design de interiores. Desenvolvido com React, TypeScript e Tailwind CSS, combinando estética minimalista de alto padrão, navegação fluida e apresentação imersiva de projetos.
                                 </p>
                             </div>
-                        </div>
+
+                            <div class="case-study-actions">
+                                <a href="https://laisgarrido.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-pill-action" onclick="event.stopPropagation()">
+                                    <i data-lucide="external-link" style="width: 1rem; height: 1rem;"></i>
+                                    <span>Acessar Site</span>
+                                </a>
+                                <a href="https://github.com/cauagarrido/laisgarrido-arq" target="_blank" rel="noopener noreferrer" class="btn-pill-action secondary" onclick="event.stopPropagation()">
+                                    <i data-lucide="github" style="width: 1rem; height: 1rem;"></i>
+                                    <span>Repositório</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- PROJECT 2: MANUAL DO MILHEIRO INICIANTE -->
+                        <article class="case-study-card-carousel" onclick="window.open('https://manualdomilheiro.vercel.app/', '_blank')" role="button" tabindex="0" aria-label="Abrir projeto Manual do Milheiro">
+                            <img src="./assets/WhatsApp Image 2026-04-07 at 10.57.59.jpeg" alt="Manual do Milheiro Iniciante" class="case-study-bg-img">
+                            <div class="case-study-gradient-overlay"></div>
+
+                            <div class="case-study-top-bar">
+                                <div class="case-study-tags">
+                                    <span class="tag-pill accent">Projeto Freelancer</span>
+                                    <span class="tag-pill">Landing Page</span>
+                                    <span class="tag-pill">UI/UX & Design</span>
+                                    <span class="tag-pill">2025</span>
+                                </div>
+                                <div class="btn-case-study-circle" title="Acessar Site">
+                                    <i data-lucide="arrow-up-right" style="width: 1.25rem; height: 1.25rem;"></i>
+                                </div>
+                            </div>
+
+                            <div class="case-study-middle-info">
+                                <span class="case-study-category">Landing Page & Conversão</span>
+                                <h3 class="case-study-title">Manual do Milheiro Iniciante</h3>
+                                <p class="case-study-desc">
+                                    Landing page estratégica e produto digital com foco em conversão e organização para acúmulo inteligente de milhas aéreas. Desenvolvido com experiência mobile-first, visual moderno e alta taxa de engajamento.
+                                </p>
+                            </div>
+
+                            <div class="case-study-actions">
+                                <a href="https://manualdomilheiro.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-pill-action" onclick="event.stopPropagation()">
+                                    <i data-lucide="external-link" style="width: 1rem; height: 1rem;"></i>
+                                    <span>Acessar Site</span>
+                                </a>
+                                <a href="https://github.com/cauagarrido/ManualDoMilheiro" target="_blank" rel="noopener noreferrer" class="btn-pill-action secondary" onclick="event.stopPropagation()">
+                                    <i data-lucide="github" style="width: 1rem; height: 1rem;"></i>
+                                    <span>Repositório</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- PROJECT 3: BALLONE - MESAS DE SINUCA & LAZER -->
+                        <article class="case-study-card-carousel" onclick="window.open('https://ballone.vercel.app/', '_blank')" role="button" tabindex="0" aria-label="Abrir projeto BallOne">
+                            <img src="./assets/ballone.png" alt="BallOne Mesas de Sinuca e Lazer" class="case-study-bg-img">
+                            <div class="case-study-gradient-overlay"></div>
+
+                            <div class="case-study-top-bar">
+                                <div class="case-study-tags">
+                                    <span class="tag-pill accent">Projeto Freelancer</span>
+                                    <span class="tag-pill">Catálogo & E-commerce</span>
+                                    <span class="tag-pill">Next.js & Tailwind</span>
+                                    <span class="tag-pill">2024 / 2025</span>
+                                </div>
+                                <div class="btn-case-study-circle" title="Acessar Site">
+                                    <i data-lucide="arrow-up-right" style="width: 1.25rem; height: 1.25rem;"></i>
+                                </div>
+                            </div>
+
+                            <div class="case-study-middle-info">
+                                <span class="case-study-category">E-Commerce & Catálogo Interativo</span>
+                                <h3 class="case-study-title">BallOne — Mesas de Sinuca & Lazer</h3>
+                                <p class="case-study-desc">
+                                    Plataforma institucional e catálogo digital interativo para fabricante de mesas de sinuca de alto padrão, pebolins e acessórios de lazer. Apresentação imersiva de produtos sob medida, integração direta de orçamentos via WhatsApp e layout responsivo de alta conversão.
+                                </p>
+                            </div>
+
+                            <div class="case-study-actions">
+                                <a href="https://ballone.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-pill-action" onclick="event.stopPropagation()">
+                                    <i data-lucide="external-link" style="width: 1rem; height: 1rem;"></i>
+                                    <span>Acessar Site</span>
+                                </a>
+                                <a href="https://github.com/cauagarrido/BallOne" target="_blank" rel="noopener noreferrer" class="btn-pill-action secondary" onclick="event.stopPropagation()">
+                                    <i data-lucide="github" style="width: 1rem; height: 1rem;"></i>
+                                    <span>Repositório</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- PROJECT 4: API PARA ECOMMERCE -->
+                        <article class="case-study-card-carousel" onclick="window.open('https://github.com/cauagarrido/ecommerce-flask', '_blank')" role="button" tabindex="0" aria-label="Abrir projeto API Ecommerce">
+                            <img src="./assets/ecommerce_api.jpg" alt="API para Ecommerce Flask" class="case-study-bg-img">
+                            <div class="case-study-gradient-overlay"></div>
+
+                            <div class="case-study-top-bar">
+                                <div class="case-study-tags">
+                                    <span class="tag-pill accent">Backend & REST API</span>
+                                    <span class="tag-pill">Python & Flask</span>
+                                    <span class="tag-pill">SQLite / PostgreSQL</span>
+                                    <span class="tag-pill">2025</span>
+                                </div>
+                                <div class="btn-case-study-circle" title="Ver no GitHub">
+                                    <i data-lucide="arrow-up-right" style="width: 1.25rem; height: 1.25rem;"></i>
+                                </div>
+                            </div>
+
+                            <div class="case-study-middle-info">
+                                <span class="case-study-category">Backend & Arquitetura REST</span>
+                                <h3 class="case-study-title">API para Ecommerce</h3>
+                                <p class="case-study-desc">
+                                    API RESTful para gestão completa de e-commerce construída com Flask e Flask-SQLAlchemy. Permite autenticação, catálogo de produtos, manipulação de pedidos e banco de dados relacional com transações seguras e validação rigorosa.
+                                </p>
+                            </div>
+
+                            <div class="case-study-actions">
+                                <a href="https://github.com/cauagarrido/ecommerce-flask" target="_blank" rel="noopener noreferrer" class="btn-pill-action" onclick="event.stopPropagation()">
+                                    <i data-lucide="github" style="width: 1rem; height: 1rem;"></i>
+                                    <span>Ver no GitHub</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- PROJECT 5: PLATAFORMA PETFINDER -->
+                        <article class="case-study-card-carousel" onclick="window.open('https://github.com/Dux4/PetFinder', '_blank')" role="button" tabindex="0" aria-label="Abrir projeto PetFinder">
+                            <img src="./assets/petfinder.jpg" alt="Plataforma PetFinder" class="case-study-bg-img">
+                            <div class="case-study-gradient-overlay"></div>
+
+                            <div class="case-study-top-bar">
+                                <div class="case-study-tags">
+                                    <span class="tag-pill mint">Trabalho Acadêmico (TCC)</span>
+                                    <span class="tag-pill">React & Node.js</span>
+                                    <span class="tag-pill">PostgreSQL</span>
+                                    <span class="tag-pill">2025</span>
+                                </div>
+                                <div class="btn-case-study-circle" title="Ver no GitHub">
+                                    <i data-lucide="arrow-up-right" style="width: 1.25rem; height: 1.25rem;"></i>
+                                </div>
+                            </div>
+
+                            <div class="case-study-middle-info">
+                                <span class="case-study-category">Fullstack Web & Mobile</span>
+                                <h3 class="case-study-title">Plataforma PetFinder</h3>
+                                <p class="case-study-desc">
+                                    Sistema fullstack desenvolvido como TCC voltado à localização, resgate e adoção responsável de pets. Conta com interface rica em React, mapas interativos, perfis completos e arquitetura em banco de dados PostgreSQL.
+                                </p>
+                            </div>
+
+                            <div class="case-study-actions">
+                                <a href="https://github.com/Dux4/PetFinder" target="_blank" rel="noopener noreferrer" class="btn-pill-action" onclick="event.stopPropagation()">
+                                    <i data-lucide="github" style="width: 1rem; height: 1rem;"></i>
+                                    <span>Ver no GitHub</span>
+                                </a>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <!-- Carousel Dots Indicator -->
+                <div class="carousel-dots-wrap">
+                    <div class="carousel-dots" id="carouselDots">
+                        <button class="carousel-dot active" data-index="0" aria-label="Ir para projeto 1"></button>
+                        <button class="carousel-dot" data-index="1" aria-label="Ir para projeto 2"></button>
+                        <button class="carousel-dot" data-index="2" aria-label="Ir para projeto 3"></button>
+                        <button class="carousel-dot" data-index="3" aria-label="Ir para projeto 4"></button>
+                        <button class="carousel-dot" data-index="4" aria-label="Ir para projeto 5"></button>
                     </div>
                 </div>
             </div>
         </section>
-    
 
-<section class="portfolio-section" id="portfolio">
-    <div class="tech-container">
-        <h2 class="tech-title">Tecnologias</h2>
-        <div class="tech-divider"></div>
-        <div class="tech-grid">
-            <div class="tech-card">
-                <span class="iconify" data-icon="logos:python" style="font-size: 3rem; margin-bottom: 1.2rem;"></span>
-                <h3 style="color: white; font-weight: 600; font-size: 1.2rem; margin-bottom: 0.6rem;">Python</h3>
-                <p style="color: #a1a1aa; font-size: 0.9rem; line-height: 1.5;">Desenvolvimento backend e automação</p>
-            </div>
-            <div class="tech-card">
-                <span class="iconify" data-icon="logos:nodejs-icon" style="font-size: 3rem; margin-bottom: 1.2rem;"></span>
-                <h3 style="color: white; font-weight: 600; font-size: 1.2rem; margin-bottom: 0.6rem;">Node.js</h3>
-                <p style="color: #a1a1aa; font-size: 0.9rem; line-height: 1.5;">APIs e aplicações server-side</p>
-            </div>
-            <div class="tech-card">
-                <span class="iconify" data-icon="logos:mysql" style="font-size: 3rem; margin-bottom: 1.2rem;"></span>
-                <h3 style="color: white; font-weight: 600; font-size: 1.2rem; margin-bottom: 0.6rem;">SQL</h3>
-                <p style="color: #a1a1aa; font-size: 0.9rem; line-height: 1.5;">Banco de dados e consultas</p>
-            </div>
-            <div class="tech-card">
-                <span class="iconify" data-icon="logos:react" style="font-size: 3rem; margin-bottom: 1.2rem;"></span>
-                <h3 style="color: white; font-weight: 600; font-size: 1.2rem; margin-bottom: 0.6rem;">React.js</h3>
-                <p style="color: #a1a1aa; font-size: 0.9rem; line-height: 1.5;">Interfaces modernas e interativas</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="projects-container" id="projects" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
-        <h2 class="headline">
-            Projetos que eu já <span>criei</span>
-        </h2>
-
-        <div class="projects-grid">
-            
-            <div class="project-card featured" style="--accent-rgb: 255, 42, 64;" onclick="window.open('https://github.com/cauagarrido/ManualDoMilheiro', '_blank')">
-                <div class="project-inner-grid"></div>
-                <div class="project-img-wrapper">
-                    <img src="./assets/WhatsApp Image 2026-04-07 at 10.57.59.jpeg" alt="Manual do Milheiro" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;">
-                </div>
-                <div class="project-info" style="position: absolute; bottom: 0; left: 0; padding: 3rem; z-index: 10; width: 60%;">
-                    <div class="project-meta" style="margin-bottom: 1rem; display: flex; gap: 1rem; align-items: center; color: #a1a1aa; font-size: 0.9rem; font-weight: 600;">
-                        <span class="company" style="color: white;">Projeto Freelancer</span>
-                        <span>·</span>
-                        <span class="year">2025</span>
-                    </div>
-                    <h3 class="project-title" style="font-size: 2.5rem; font-family: var(--font-display); line-height: 1.1; margin-bottom: 1rem;">Manual do<br>Milheiro Iniciante</h3>
-                    <p class="project-desc" style="color: rgba(255,255,255,0.7); max-width: 400px; line-height: 1.6;">Guia completo com estratégias e organização para acumular e multiplicar milhas aéreas de forma inteligente.</p>
-                </div>
-            </div>
-
-            
-            <div class="project-card" style="--accent-rgb: 239, 68, 68;" onclick="window.open('https://github.com/cauagarrido/ecommerce-flask', '_blank')">
-                <div class="project-inner-grid"></div>
-                <div class="project-img-wrapper" style="width: 100%; height: 100%; transform: none; right: 0; border-radius: 0;">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800" alt="Churn Analysis" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.4;">
-                </div>
-                <div class="project-info" style="position: absolute; bottom: 0; left: 0; padding: 2.5rem; z-index: 10;">
-                    <div class="project-meta" style="margin-bottom: 0.8rem; display: flex; gap: 1rem; align-items: center; color: #a1a1aa; font-size: 0.8rem; font-weight: 600;">
-                        <span class="company" style="color: white;">Projeto Pessoal</span>
-                        <span>·</span>
-                        <span class="year">2025</span>
-                    </div>
-                    <h3 class="project-title" style="font-size: 1.8rem; font-family: var(--font-display); line-height: 1.2; margin-bottom: 0.8rem;">API para<br>Ecommerce</h3>
-                    <p class="project-desc" style="color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 1.6;">Esta é uma API básica de e-commerce construída com Flask e Flask-SQLAlchemy. Ela permite o cadastro de produtos em um banco de dados SQLite.</p>
-                </div>
-            </div>
-
-            
-            <div class="project-card" style="--accent-rgb: 225, 29, 72;" onclick="window.open('https://github.com/Dux4/PetFinder', '_blank')">
-                <div class="project-inner-grid"></div>
-                <div class="project-img-wrapper" style="width: 100%; height: 100%; transform: none; right: 0; border-radius: 0;">
-                    <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=800" alt="PetFinder - Adoção" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.4;">
-                </div>
-                <div class="project-info" style="position: absolute; bottom: 0; left: 0; padding: 2.5rem; z-index: 10;">
-                    <div class="project-meta" style="margin-bottom: 0.8rem; display: flex; gap: 1rem; align-items: center; color: #a1a1aa; font-size: 0.8rem; font-weight: 600;">
-                        <span class="company" style="color: white;">Acadêmico (TCC)</span>
-                        <span>·</span>
-                        <span class="year">2025</span>
-                    </div>
-                    <h3 class="project-title" style="font-size: 1.8rem; font-family: var(--font-display); line-height: 1.2; margin-bottom: 0.8rem;">Plataforma<br>PetFinder</h3>
-                    <p class="project-desc" style="color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 1.6;">Projeto de TCC desenvolvido em grupo para adoção e localização de pets.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-                
-        <section class="cta-section reveal" id="contact">
-            <div class="cta-aura"></div>
-            <div class="cta-container">
-                <div class="glass-card-premium" style="padding: 5rem 2rem;">
-                    <div class="tech-container" style="padding: 0; margin-bottom: 1.5rem;">
-                        <h2 class="tech-title">Contato</h2>
-                        <div class="tech-divider" style="margin-bottom: 2rem;"></div>
-                    </div>
-                    <p class="cta-subtitle" style="margin-bottom: 4rem; font-size: 1.25rem;">
-                        Vamos trabalhar juntos? Entre em contato!
+        <!-- ==========================================================================
+             SECTION 2: TECNOLOGIAS (PLACED BELOW PROJECTS - SPHERE "INDUSTRIES" STYLE)
+             ========================================================================== -->
+        <section class="technologies-section" id="technologies">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-aura-glow"></div>
+                    <div class="section-tag">Habilidades & Especialidades</div>
+                    <h2 class="headline">Stack & <span class="purple">Tecnologias</span></h2>
+                    <p class="subheadline">
+                        Ferramentas e linguagens dominadas que utilizo no dia a dia para desenvolver sistemas de alta performance, do backend ao frontend.
                     </p>
-                                        <div class="contact-buttons-container" style="display: flex; flex-wrap: wrap; gap: 1.2rem; justify-content: center; max-width: 650px; margin: 0 auto;">
-                        <a href="mailto:cauagarrido@gmail.com" class="contact-btn" aria-label="Enviar email">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                            </svg>
-                            <span>cauagarrido@gmail.com</span>
-                        </a>
-                        <a href="https://github.com/cauagarrido" target="_blank" class="contact-btn" aria-label="Ver perfil no GitHub">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                            <span>GitHub</span>
-                        </a>
-                        <a href="https://linkedin.com/in/cauagarrido" target="_blank" class="contact-btn" aria-label="Ver perfil no LinkedIn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                            </svg>
-                            <span>LinkedIn</span>
-                        </a>
-                        <a href="https://wa.me/71999847528" target="_blank" class="contact-btn" aria-label="Iniciar conversa no WhatsApp">
-                            <span class="iconify" data-icon="mdi:whatsapp" style="width: 24px; height: 24px;"></span>
-                            <span>WhatsApp</span>
-                        </a>
-                        <a href="https://instagram.com/cauagarrido" target="_blank" class="contact-btn" aria-label="Ver perfil no Instagram">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0C8.75 0 8.333.012 7.025.07c-1.373.061-2.316.302-3.13.626C3.076.82 2.628 1.134 2.155 1.607.728 3.033.003 5.438.003 12c0 6.562.725 8.967 2.152 10.393 1.427 1.427 3.832 2.152 10.393 2.152s8.967-.725 10.393-2.152c1.427-1.427 2.152-3.832 2.152-10.393 0-6.562-.725-8.967-2.152-10.393-1.427-1.427-3.832-2.152-10.393-2.152zM12 2.219c3.21 0 3.585.012 4.851.07c1.173.052 1.745.26 2.17.426.495.195.83.424 1.185.78s.585.69.78 1.185c.166.425.374 1.05.426 2.17.058 1.266.07 1.641.07 4.851s-.012 3.585-.07 4.851c-.052 1.173-.26 1.745-.426 2.17-.195.495-.424.83-.78 1.185s-.69.585-1.185.78c-.425.166-1.05-.374-2.17.426-1.266.058-1.641.07-4.851.07s-3.585-.012-4.851-.07c-1.173-.052-1.745-.26-2.17-.426-.495-.195-.83-.424-1.185-.78s-.585-.69-.78-1.185c-.166-.425-.374-1.05-.426-2.17-.058-1.266-.07-1.641-.07-4.851s.012-3.585.07-4.851c.052-1.173.26-1.745.426-2.17.195-.495.424-.83.78-1.185s.69-.585 1.185-.78c.425-.166 1.05-.374 2.17-.426 1.266-.058 1.641-.07 4.851-.07zM12 6.865c-2.825 0-5.135 2.31-5.135 5.135s2.31 5.135 5.135 5.135 5.135-2.31 5.135-5.135-2.31-5.135-5.135-5.135zm0 8.435c-1.815 0-3.3-1.485-3.3-3.3s1.485-3.3 3.3-3.3 3.3 1.485 3.3 3.3-1.485 3.3-3.3 3.3zm5.325-9.98c0-.756.619-1.375 1.375-1.375s1.375.619 1.375 1.375c0 .756-.619 1.375-1.375 1.375s-1.375-.619-1.375-1.375z" />
-                            </svg>
-                            <span>Instagram</span>
-                        </a>
+                </div>
+
+                <!-- Category Filters (Sphere Style) -->
+                <div class="tech-filter-bar">
+                    <button class="filter-pill active" data-filter="all">Todas as Tecnologias</button>
+                    <button class="filter-pill" data-filter="backend">Backend & APIs</button>
+                    <button class="filter-pill" data-filter="frontend">Frontend & UI</button>
+                    <button class="filter-pill" data-filter="database">Bancos de Dados</button>
+                    <button class="filter-pill" data-filter="tools">Design & Ferramentas</button>
+                    <button class="filter-pill" data-filter="ai">IA & Engenharia</button>
+                </div>
+
+                <!-- Tech Cards Grid -->
+                <div class="tech-cards-grid">
+                    <!-- Python -->
+                    <div class="tech-card" data-category="backend">
+                        <div class="tech-card-header">
+                            <div class="tech-icon-box">
+                                <span class="iconify" data-icon="logos:python"></span>
+                            </div>
+                        </div>
+                        <div class="tech-card-body">
+                            <h3>Python</h3>
+                            <p>APIs com Flask, automação de rotinas e scripts backend eficientes.</p>
+                        </div>
+                        <div class="tech-card-footer">
+                            <i data-lucide="cpu" style="width: 1rem; height: 1rem; color: var(--accent-purple);"></i>
+                            <span>Backend & Automação</span>
+                        </div>
+                    </div>
+
+                    <!-- Node.js -->
+                    <div class="tech-card" data-category="backend">
+                        <div class="tech-card-header">
+                            <div class="tech-icon-box">
+                                <span class="iconify" data-icon="logos:nodejs-icon"></span>
+                            </div>
+                        </div>
+                        <div class="tech-card-body">
+                            <h3>Node.js</h3>
+                            <p>APIs RESTful escaláveis, arquitetura backend e microsserviços.</p>
+                        </div>
+                        <div class="tech-card-footer">
+                            <i data-lucide="server" style="width: 1rem; height: 1rem; color: var(--accent-mint);"></i>
+                            <span>Server-Side & APIs</span>
+                        </div>
+                    </div>
+
+                    <!-- React.js -->
+                    <div class="tech-card" data-category="frontend">
+                        <div class="tech-card-header">
+                            <div class="tech-icon-box">
+                                <span class="iconify" data-icon="logos:react"></span>
+                            </div>
+                        </div>
+                        <div class="tech-card-body">
+                            <h3>React.js</h3>
+                            <p>Interfaces reativas, componentização modular, hooks e alto desempenho.</p>
+                        </div>
+                        <div class="tech-card-footer">
+                            <i data-lucide="layout" style="width: 1rem; height: 1rem; color: #61dafb;"></i>
+                            <span>Interfaces Modernas</span>
+                        </div>
+                    </div>
+
+                    <!-- JavaScript (ES6+) -->
+                    <div class="tech-card" data-category="frontend">
+                        <div class="tech-card-header">
+                            <div class="tech-icon-box">
+                                <span class="iconify" data-icon="logos:javascript"></span>
+                            </div>
+                        </div>
+                        <div class="tech-card-body">
+                            <h3>JavaScript (ES6+)</h3>
+                            <p>DOM, Promises, Async/Await, Web APIs e padrões modernos.</p>
+                        </div>
+                        <div class="tech-card-footer">
+                            <i data-lucide="code-2" style="width: 1rem; height: 1rem; color: #f7df1e;"></i>
+                            <span>Linguagem Base</span>
+                        </div>
+                    </div>
+
+                    <!-- SQL & Banco de Dados -->
+                    <div class="tech-card" data-category="database">
+                        <div class="tech-card-header">
+                            <div class="tech-icon-box">
+                                <span class="iconify" data-icon="logos:mysql"></span>
+                            </div>
+                        </div>
+                        <div class="tech-card-body">
+                            <h3>SQL & Bancos</h3>
+                            <p>Modelagem relacional, consultas otimizadas e integração em PostgreSQL, MySQL e SQLite.</p>
+                        </div>
+                        <div class="tech-card-footer">
+                            <i data-lucide="database" style="width: 1rem; height: 1rem; color: #00758f;"></i>
+                            <span>PostgreSQL / SQLite / MySQL</span>
+                        </div>
+                    </div>
+
+                    <!-- HTML5 & CSS Moderno -->
+                    <div class="tech-card" data-category="frontend">
+                        <div class="tech-card-header">
+                            <div class="tech-icon-box">
+                                <span class="iconify" data-icon="logos:html-5"></span>
+                            </div>
+                        </div>
+                        <div class="tech-card-body">
+                            <h3>HTML5 & CSS Moderno</h3>
+                            <p>Semântica, SEO, Flexbox, CSS Grid e interfaces 100% responsivas.</p>
+                        </div>
+                        <div class="tech-card-footer">
+                            <i data-lucide="sparkles" style="width: 1rem; height: 1rem; color: #e34f26;"></i>
+                            <span>Semântica & Estilização</span>
+                        </div>
+                    </div>
+
+                    <!-- Claude Code (NEW) -->
+                    <div class="tech-card" data-category="ai tools">
+                        <div class="tech-card-header">
+                            <div class="tech-icon-box" style="background: rgba(217, 119, 6, 0.12); border-color: rgba(217, 119, 6, 0.3);">
+                                <span class="iconify" data-icon="simple-icons:anthropic" style="color: #d97706; font-size: 1.8rem;"></span>
+                            </div>
+                        </div>
+                        <div class="tech-card-body">
+                            <h3>Claude Code</h3>
+                            <p>Engenharia de software assistida por IA via terminal, refatoração e automação ágil.</p>
+                        </div>
+                        <div class="tech-card-footer">
+                            <i data-lucide="terminal" style="width: 1rem; height: 1rem; color: #d97706;"></i>
+                            <span>IA CLI & Refatoração</span>
+                        </div>
+                    </div>
+
+                    <!-- Codex (NEW) -->
+                    <div class="tech-card" data-category="ai tools">
+                        <div class="tech-card-header">
+                            <div class="tech-icon-box" style="background: rgba(16, 163, 127, 0.12); border-color: rgba(16, 163, 127, 0.3);">
+                                <span class="iconify" data-icon="simple-icons:openai" style="color: #10a37f; font-size: 1.8rem;"></span>
+                            </div>
+                        </div>
+                        <div class="tech-card-body">
+                            <h3>Codex</h3>
+                            <p>Geração inteligente de código, aceleração de desenvolvimento e testes automatizados.</p>
+                        </div>
+                        <div class="tech-card-footer">
+                            <i data-lucide="sparkles" style="width: 1rem; height: 1rem; color: #10a37f;"></i>
+                            <span>Modelos de Código & IA</span>
+                        </div>
+                    </div>
+
+                    <!-- Gemini (NEW) -->
+                    <div class="tech-card" data-category="ai tools">
+                        <div class="tech-card-header">
+                            <div class="tech-icon-box" style="background: rgba(66, 133, 244, 0.12); border-color: rgba(66, 133, 244, 0.3);">
+                                <span class="iconify" data-icon="simple-icons:googlegemini" style="color: #4285f4; font-size: 1.8rem;"></span>
+                            </div>
+                        </div>
+                        <div class="tech-card-body">
+                            <h3>Gemini</h3>
+                            <p>Soluções com IA multimodal, prototipagem ágil e assistência técnica avançada.</p>
+                        </div>
+                        <div class="tech-card-footer">
+                            <i data-lucide="zap" style="width: 1rem; height: 1rem; color: #4285f4;"></i>
+                            <span>IA Multimodal & Google</span>
+                        </div>
+                    </div>
+
+                    <!-- Java -->
+                    <div class="tech-card" data-category="backend">
+                        <div class="tech-card-header">
+                            <div class="tech-icon-box">
+                                <span class="iconify" data-icon="logos:java"></span>
+                            </div>
+                        </div>
+                        <div class="tech-card-body">
+                            <h3>Java</h3>
+                            <p>Programação Orientada a Objetos, lógica de algoritmos e estruturas de dados.</p>
+                        </div>
+                        <div class="tech-card-footer">
+                            <i data-lucide="layers" style="width: 1rem; height: 1rem; color: #f89820;"></i>
+                            <span>POO & Algoritmos</span>
+                        </div>
+                    </div>
+
+                    <!-- Git & GitHub -->
+                    <div class="tech-card" data-category="tools">
+                        <div class="tech-card-header">
+                            <div class="tech-icon-box">
+                                <span class="iconify" data-icon="logos:git-icon"></span>
+                            </div>
+                        </div>
+                        <div class="tech-card-body">
+                            <h3>Git & GitHub</h3>
+                            <p>Controle de versão, commits semânticos e colaboração ágil de código.</p>
+                        </div>
+                        <div class="tech-card-footer">
+                            <i data-lucide="git-branch" style="width: 1rem; height: 1rem; color: #f05032;"></i>
+                            <span>Versionamento</span>
+                        </div>
+                    </div>
+
+                    <!-- Figma & UI Design -->
+                    <div class="tech-card" data-category="tools">
+                        <div class="tech-card-header">
+                            <div class="tech-icon-box">
+                                <span class="iconify" data-icon="logos:figma"></span>
+                            </div>
+                        </div>
+                        <div class="tech-card-body">
+                            <h3>Figma & UI Design</h3>
+                            <p>Prototipagem de interfaces, design systems e UI/UX de alto padrão.</p>
+                        </div>
+                        <div class="tech-card-footer">
+                            <i data-lucide="figma" style="width: 1rem; height: 1rem; color: #a259ff;"></i>
+                            <span>UI/UX & Prototipagem</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-</main>
 
+        <!-- ==========================================================================
+             SECTION 3: TRAJETÓRIA / RESUMO (FORMATION & JOURNEY)
+             ========================================================================== -->
+        <section class="experience-section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-aura-glow"></div>
+                    <div class="section-tag mint">Formação & Experiência</div>
+                    <h2 class="headline">De números a estratégia: <br>a formação do <span class="purple">profissional.</span></h2>
+                    <p class="subheadline">
+                        Uma trajetória multidisciplinar que une o olhar artístico e refinado do design gráfico à precisão lógica da engenharia de software.
+                    </p>
+                </div>
+
+                <div class="timeline-layout">
+                    <!-- Column 1: Formação Acadêmica -->
+                    <div class="timeline-column">
+                        <div class="timeline-column-header">
+                            <span class="timeline-column-badge purple">
+                                <i data-lucide="graduation-cap" style="width: 1.15rem; height: 1.15rem;"></i>
+                                <span>Formação Acadêmica</span>
+                            </span>
+                        </div>
+                        <div class="timeline-list">
+                            <!-- Ucsal -->
+                            <div class="timeline-item-sphere">
+                                <div class="timeline-dot">
+                                    <i data-lucide="graduation-cap" style="width: 1.3rem; height: 1.3rem; color: var(--accent-purple);"></i>
+                                </div>
+                                <div class="timeline-card-content">
+                                    <span class="timeline-year-tag">2023 — 2025</span>
+                                    <h3 class="timeline-card-title">Análise e Desenvolvimento de Sistemas</h3>
+                                    <p class="timeline-institution">Universidade Católica do Salvador (Ucsal)</p>
+                                    <p class="timeline-card-desc">
+                                        Formação superior focada na arquitetura de software, desenvolvimento de aplicações web e desktop, estruturas de dados, modelagem de banco de dados e engenharia de requisitos. Uso de Java, PostgreSQL, HTML5, CSS3 e JavaScript.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Infinity School -->
+                            <div class="timeline-item-sphere">
+                                <div class="timeline-dot">
+                                    <i data-lucide="rocket" style="width: 1.3rem; height: 1.3rem; color: var(--accent-purple);"></i>
+                                </div>
+                                <div class="timeline-card-content">
+                                    <span class="timeline-year-tag">2023</span>
+                                    <h3 class="timeline-card-title">Desenvolvimento Web & Sistemas</h3>
+                                    <p class="timeline-institution">Infinity School</p>
+                                    <p class="timeline-card-desc">
+                                        Imersão intensiva em programação prática: criação de sistemas web completos utilizando Python, bancos de dados SQL, APIs REST, JavaScript moderno e contato com frameworks do ecossistema React.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Escola Saga -->
+                            <div class="timeline-item-sphere">
+                                <div class="timeline-dot">
+                                    <i data-lucide="palette" style="width: 1.3rem; height: 1.3rem; color: var(--accent-purple);"></i>
+                                </div>
+                                <div class="timeline-card-content">
+                                    <span class="timeline-year-tag">2019 — 2021</span>
+                                    <h3 class="timeline-card-title">Design Gráfico, Edição & Multimídia 3D</h3>
+                                    <p class="timeline-institution">Escola Saga</p>
+                                    <p class="timeline-card-desc">
+                                        Especialização profunda em comunicação visual, composição estética, edição de imagem, produção audiovisual e modelagem 3D. Essa base garante que meus projetos web tenham acabamento visual superior.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Experiências Anteriores -->
+                    <div class="timeline-column">
+                        <div class="timeline-column-header">
+                            <span class="timeline-column-badge mint">
+                                <i data-lucide="briefcase" style="width: 1.15rem; height: 1.15rem;"></i>
+                                <span>Experiências Anteriores</span>
+                            </span>
+                        </div>
+                        <div class="timeline-list">
+                            <!-- Freelancer Web Developer -->
+                            <div class="timeline-item-sphere">
+                                <div class="timeline-dot mint-dot">
+                                    <i data-lucide="code-2" style="width: 1.3rem; height: 1.3rem; color: var(--accent-mint);"></i>
+                                </div>
+                                <div class="timeline-card-content mint-hover">
+                                    <span class="timeline-year-tag mint">2024 — Presente</span>
+                                    <h3 class="timeline-card-title">Programador Web Freelancer</h3>
+                                    <p class="timeline-institution">Desenvolvimento Fullstack & Soluções Digitais</p>
+                                    <p class="timeline-card-desc">
+                                        Desenvolvimento de projetos web completos citados no portfólio: a landing page de alto padrão <strong>Laís Garrido Arquitetura</strong> (React, TypeScript e Tailwind), a plataforma e catálogo <strong>BallOne</strong>, a landing page estratégica de conversão <strong>Manual do Milheiro</strong>, a <strong>API REST para Ecommerce</strong> com Flask e SQLite/PostgreSQL, e o aplicativo <strong>PetFinder</strong>. Atuação abrangendo desde o design UI/UX responsivo até a arquitetura de backend e deploy.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Sindauto Bahia -->
+                            <div class="timeline-item-sphere">
+                                <div class="timeline-dot mint-dot">
+                                    <i data-lucide="headphones" style="width: 1.3rem; height: 1.3rem; color: var(--accent-mint);"></i>
+                                </div>
+                                <div class="timeline-card-content mint-hover">
+                                    <span class="timeline-year-tag mint">1 Ano de Experiência</span>
+                                    <h3 class="timeline-card-title">Suporte de TI & Help Desk</h3>
+                                    <p class="timeline-institution">Sindauto Bahia</p>
+                                    <p class="timeline-card-desc">
+                                        1 ano de experiência atuando como help desk e suporte técnico direto ao usuário. Gestão e resolução de chamados utilizando o sistema <strong>GLPI</strong> e criação de scripts em <strong>Python</strong> para automação da rotina de atendimentos e realização ágil de demandas internas de TI.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             SECTION 4: CALL TO ACTION (SPHERE ICONIC IRIDESCENT GRADIENT BANNER)
+             ========================================================================== -->
+        <section class="cta-section" id="contact">
+            <div class="container">
+                <div class="cta-banner-sphere">
+                    <div class="cta-banner-content">
+                        <span class="cta-banner-tag">Vamos construir algo incrível</span>
+                        <h2 class="cta-banner-title">
+                            Descubra soluções digitais ou planeje seu próximo projeto.
+                        </h2>
+                        <p class="cta-banner-desc">
+                            Estou disponível para novas oportunidades, projetos freelancers e desafios de engenharia de software. Vamos transformar sua visão em realidade?
+                        </p>
+
+                        <div class="cta-banner-buttons">
+                            <a href="https://wa.me/71999847528" target="_blank" rel="noopener noreferrer" class="btn-cta-dark">
+                                <span class="iconify" data-icon="mdi:whatsapp" style="font-size: 1.3rem;"></span>
+                                <span>Conversar no WhatsApp</span>
+                            </a>
+                            <a href="mailto:cauagarrido@gmail.com" class="btn-cta-light">
+                                <i data-lucide="mail" style="width: 1.2rem; height: 1.2rem;"></i>
+                                <span>cauagarrido@gmail.com</span>
+                            </a>
+                        </div>
+
+                        <!-- Social Links Pills inside Banner -->
+                        <div class="cta-social-bar">
+                            <a href="https://linktr.ee/cauagarrido" target="_blank" rel="noopener noreferrer" class="social-pill-link">
+                                <span class="iconify" data-icon="simple-icons:linktree" style="font-size: 1.1rem;"></span>
+                                <span>Linktree</span>
+                            </a>
+                            <a href="https://github.com/cauagarrido" target="_blank" rel="noopener noreferrer" class="social-pill-link">
+                                <i data-lucide="github" style="width: 1.1rem; height: 1.1rem;"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://linkedin.com/in/cauagarrido" target="_blank" rel="noopener noreferrer" class="social-pill-link">
+                                <i data-lucide="linkedin" style="width: 1.1rem; height: 1.1rem;"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://instagram.com/cauagarrido" target="_blank" rel="noopener noreferrer" class="social-pill-link">
+                                <i data-lucide="instagram" style="width: 1.1rem; height: 1.1rem;"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="https://wa.me/71999847528" target="_blank" rel="noopener noreferrer" class="social-pill-link">
+                                <span class="iconify" data-icon="mdi:whatsapp" style="font-size: 1.1rem;"></span>
+                                <span>WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==========================================================================
+         FOOTER
+         ========================================================================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h2>CAUÃ GARRIDO</h2>
+                    <p>Desenvolvedor Fullstack — Interfaces modernas, performance e elegância.</p>
+                </div>
+                <div class="footer-nav">
+                    <a href="#hero">Sobre Mim</a>
+                    <a href="#projects">Projetos</a>
+                    <a href="#technologies">Tecnologias</a>
+                    <a href="#about">Trajetória</a>
+                    <a href="#contact">Contato</a>
+                    <a href="https://linktr.ee/cauagarrido" target="_blank" rel="noopener noreferrer">Linktree</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Cauã Garrido. Todos os direitos reservados.</p>
+                <div class="footer-social-icons">
+                    <a href="https://github.com/cauagarrido" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub"><i data-lucide="github"></i></a>
+                    <a href="https://linkedin.com/in/cauagarrido" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="https://instagram.com/cauagarrido" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                    <a href="https://wa.me/71999847528" target="_blank" rel="noopener noreferrer" title="WhatsApp" aria-label="WhatsApp"><span class="iconify" data-icon="mdi:whatsapp"></span></a>
+                    <a href="https://linktr.ee/cauagarrido" target="_blank" rel="noopener noreferrer" title="Linktree" aria-label="Linktree"><span class="iconify" data-icon="simple-icons:linktree"></span></a>
+                </div>
+                <div class="status-badge">
+                    <span class="status-dot-pulse"></span>
+                    <span>Disponível para novos projetos</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
     <script src="script.js" defer></script>
 </body>
 </html>
-
-
-
-
-
