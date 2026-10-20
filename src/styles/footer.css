@@ -18,12 +18,25 @@
   gap: 2rem;
 }
 
+.footer-brand::before {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 90px;
+  margin-bottom: 0.55rem;
+  background-image: url('../assets/cg-logo.png');
+  background-repeat: no-repeat;
+  background-size: 266px auto;
+  background-position: -61px -24px;
+}
+
 .footer-brand h2 {
   font-family: var(--font-display);
   font-size: 1.4rem;
   font-weight: 800;
   color: #ffffff;
   margin-bottom: 0.3rem;
+  display: none;
 }
 
 .footer-brand p {

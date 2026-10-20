@@ -19,7 +19,6 @@ export default function Navbar() {
       >
         <a href="#hero" className="nav-brand" aria-label="Página inicial">
           <span className="nav-brand-title">CAUÃ GARRIDO</span>
-          <span className="nav-brand-badge">Fullstack</span>
         </a>
 
         <div className="nav-links">

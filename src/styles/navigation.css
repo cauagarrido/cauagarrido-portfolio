@@ -31,6 +31,16 @@
   flex-shrink: 0;
 }
 
+.nav-brand::before {
+  content: "";
+  width: 220px;
+  height: 36px;
+  background-image: url('../assets/cg-wordmark.png');
+  background-repeat: no-repeat;
+  background-size: 241px auto;
+  background-position: -11px -23px;
+}
+
 .nav-brand-title {
   font-family: var(--font-display);
   font-size: 1.15rem;
@@ -38,20 +48,7 @@
   letter-spacing: -0.02em;
   color: #fff;
   white-space: nowrap;
-}
-
-.nav-brand-badge {
-  font-size: 0.65rem;
-  font-weight: 700;
-  padding: 0.2rem 0.6rem;
-  background: rgba(158, 143, 255, 0.15);
-  border: 1px solid rgba(158, 143, 255, 0.3);
-  color: var(--accent-purple-light);
-  border-radius: 9999px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  flex-shrink: 0;
+  display: none;
 }
 
 .nav-links {
