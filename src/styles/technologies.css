@@ -59,6 +59,10 @@
   display: none;
 }
 
+.tech-carousel-pagination {
+  display: none;
+}
+
 .tech-card {
   background: rgba(18, 18, 26, 0.7);
   backdrop-filter: blur(15px);
