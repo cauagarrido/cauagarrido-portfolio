@@ -9,7 +9,7 @@ export default function Experience() {
         <SectionHeading
           tag="Formação & Experiência"
           mint
-          title={<>De números a estratégia: <br />a formação do <span className="purple">profissional.</span></>}
+          title="Formação profissional"
           text="Uma trajetória multidisciplinar que une o olhar artístico e refinado do design gráfico à precisão lógica da engenharia de software."
         />
 
