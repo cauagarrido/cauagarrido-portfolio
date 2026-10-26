@@ -12,10 +12,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className="glass-nav"
-        style={scrolled
-          ? { background: 'rgba(10, 10, 15, 0.95)', boxShadow: '0 25px 50px rgba(0, 0, 0, 0.7)' }
-          : undefined}
+        className={`glass-nav${scrolled ? ' scrolled' : ''}`}
       >
         <a href="#hero" className="nav-brand" aria-label="Página inicial">
           <span className="nav-brand-title">CAUÃ GARRIDO</span>
